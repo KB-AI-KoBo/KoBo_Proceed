@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // 올바른 경로에서 createRoot를 임포트합니다.
+import 'dotenv/config';
 import App from './App';
 import './styles/bootstrap.min.css';
 import './styles/style.css';

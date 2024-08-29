@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.0.0",
     "chart.js": "^4.4.3",
+    "dotenv": "^16.4.5",
     "html-webpack-plugin": "^5.6.0",
     "jquery": "^3.7.1",
     "jwt-decode": "^3.1.2",
@@ -50,8 +51,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "buffer": "^6.0.3",
     "cross-env": "^7.0.3",
+    "crypto-browserify": "^3.12.0",
     "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.2.1"
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0"
   }
 }

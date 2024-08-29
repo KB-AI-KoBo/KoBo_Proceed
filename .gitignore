@@ -532,3 +532,6 @@ gradle-app.setting
  .DS_Store
  GRANT
  test_data
+
+# Environment variables
+.env
