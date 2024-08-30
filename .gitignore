@@ -535,3 +535,4 @@ gradle-app.setting
 
 # Environment variables
 .env
+application.yml
