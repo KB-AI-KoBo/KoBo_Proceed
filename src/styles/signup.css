@@ -1,27 +1,117 @@
-.form-section {
-    padding: 20px;
+/* 전체 컨테이너 */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+/* 메인 컨테이너 */
+.signup-container {
+    width: 700px;
+    background-color: #eaf7e1;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.left-section {
-    background-color: #f8f9fa;
-}
-
-.right-section {
-    background-color: #f8f9fa;
-}
-
-.btn-primary {
-    margin-top: 30px;
-    margin-bottom: 14px;
-}
-
-.custom-btn-color {
-    color: #f8f9fa;
-}
-
-.form-title {
+/* 헤더 */
+.signup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.signup-heading-kobo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.signup-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 사용자 정보 및 회사 정보 섹션 */
+.signup-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 섹션 공통 스타일 */
+.signup-section {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 섹션 제목 */
+.signup-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* 입력 그룹 */
+.signup-input-group {
+    margin-bottom: 15px;
+}
+
+/* 라벨 */
+.signup-label {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #666;
+    display: block;
+}
+
+/* 텍스트 입력 */
+.signup-input {
+    min-height: 26px;
+    width: 100%;
+    max-width: 290px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* 셀렉트 박스 */
+.signup-select {
+    min-height: 26px;
+    width: 100.5%;
+    padding: 14.5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* 버튼 */
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
 }
