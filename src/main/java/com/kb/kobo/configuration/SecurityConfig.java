@@ -66,11 +66,7 @@ public class SecurityConfig {
                 .cors().and()
                 .csrf().disable() // 전체 CSRF 보호 비활성화
                 .authorizeRequests()
-                .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                .antMatchers("/financial-analysis/upload/pdf").hasRole("USER")
-                .antMatchers("/financial-analysis/upload/chat").hasRole("USER")
-                .antMatchers("/api/documents/upload").authenticated()
-                .antMatchers("/", "/home", "/user/signup", "/auth/login").permitAll()
+                .anyRequest().permitAll() // 모든 요청에 대해 인증 없이 접근 가능
                 .and()
                 .logout()
                 .logoutUrl("/auth/logout") // 로그아웃 URL 설정
