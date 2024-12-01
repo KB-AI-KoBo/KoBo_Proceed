@@ -25,7 +25,7 @@ def initialize_agent_components(llm):
         ("ai", "I understand. I'll determine the best course of action."),
         ("human", "Great, what do you think we should do next?")
     ])
-    
+
     rewrite_prompt = ChatPromptTemplate.from_messages([
         ("system", '''
         You are an expert AI assistant specializing in enhancing user inquiries for AI agents to ensure responses are precisely tailored and highly accurate. 
@@ -41,7 +41,7 @@ def initialize_agent_components(llm):
         '''),
         ("human", "Please provide the necessary context and data to improve the AI's response.")
     ])
-    
+
     generate_prompt = ChatPromptTemplate.from_messages([
         ("system", '''You are an AI assistant that generates the answer based on given context. 
                       Please write in Korean. Answer logically and avoid writing false information'''),
@@ -70,7 +70,7 @@ def initialize_agent_components(llm):
         Your focus should be entirely on the relevance and accuracy of the agent's response to the given question. Please be thorough and precise in your evaluation.
     """)
 
-    
+
     # LLM 바인딩을 미리 한 번만 실행
     base_chain = base_prompt | llm.bind(temperature=0.4)
     rewrite_chain = rewrite_prompt | llm.bind(temperature=0.3)

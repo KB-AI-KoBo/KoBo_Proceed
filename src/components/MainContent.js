@@ -13,8 +13,8 @@ const MainContent = () => {
             <Routes>
                 <Route path="/" element={<Chat />} />
                 <Route path="/chat" element={<Chat />} />
-                <Route path="/show-programs" element={<ShowPrograms />} />
-                <Route path="/suggested-programs" element={<SuggestedPrograms />} />
+                <Route path="/show-supportPrograms" element={<ShowPrograms />} />
+                <Route path="/suggested-supportPrograms" element={<SuggestedPrograms />} />
                 <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
         </div>

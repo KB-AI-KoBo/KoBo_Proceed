@@ -62,14 +62,14 @@ const Sidebar = () => {
                         </a>
                         <div className={`dropdown-menu bg-transparent border-0 ${isSupportDropdownOpen ? 'show' : ''}`}>
                             <Link
-                                to="/suggested-programs"
-                                className={`dropdown-item ${location.pathname === '/suggested-programs' ? 'active' : ''}`}
+                                to="/suggested-supportPrograms"
+                                className={`dropdown-item ${location.pathname === '/suggested-supportPrograms' ? 'active' : ''}`}
                             >
                                 추천사업
                             </Link>
                             <Link
-                                to="/show-programs"
-                                className={`dropdown-item ${location.pathname === '/show-programs' ? 'active' : ''}`}
+                                to="/show-supportPrograms"
+                                className={`dropdown-item ${location.pathname === '/show-supportPrograms' ? 'active' : ''}`}
                             >
                                 전체보기
                             </Link>

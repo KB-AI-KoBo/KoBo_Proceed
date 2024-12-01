@@ -15,7 +15,7 @@ const Sidebar = () => {
         const path = location.pathname;
         if (path === "/" || path === "/chat") {  // 루트 경로도 재무분석으로 설정
             setActiveMenu("chat");
-        } else if (path === "/suggested-programs" || path === "/show-programs") {
+        } else if (path === "/suggested-supportPrograms" || path === "/show-supportPrograms") {
             setActiveMenu("support");
         } else if (path === "/dashboard") {
             setActiveMenu("dashboard");
@@ -69,13 +69,13 @@ const Sidebar = () => {
                         </button>
                         <div className="dropdown-content">
                             <Link
-                                to="/suggested-programs"
+                                to="/suggested-supportPrograms"
                                 className="dropdown-item"
                             >
                                 <span>추천사업</span>
                             </Link>
                             <Link
-                                to="/show-programs"
+                                to="/show-supportPrograms"
                                 className="dropdown-item"
                             >
                                 <span>전체보기</span>

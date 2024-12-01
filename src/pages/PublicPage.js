@@ -26,8 +26,8 @@ export const PublicPage = () => {
                         <Routes>
                             <Route path="/" element={<Navigate to="/chat" />} /> {/* 기본 경로를 채팅으로 설정 */}
                             <Route path="/chat" element={<Chat />} /> {/* Chat 컴포넌트 */}
-                            <Route path="/suggested-programs" element={<SuggestedPrograms />} /> {/* 추천 프로그램 */}
-                            <Route path="/show-programs" element={<ShowPrograms />} /> {/* 프로그램 전체 보기 */}
+                            <Route path="/suggested-supportPrograms" element={<SuggestedPrograms />} /> {/* 추천 프로그램 */}
+                            <Route path="/show-supportPrograms" element={<ShowPrograms />} /> {/* 프로그램 전체 보기 */}
                             <Route path="/dashboard" element={<Dashboard />} /> {/* 대시보드 */}
                         </Routes>
                     </div>
