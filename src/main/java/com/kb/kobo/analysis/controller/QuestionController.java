@@ -6,6 +6,7 @@ import com.kb.kobo.analysis.domain.AnalysisResult;
 import com.kb.kobo.document.domain.Document;
 import com.kb.kobo.analysis.domain.Question;
 import com.kb.kobo.analysis.service.AnalysisService;
+import com.kb.kobo.document.repository.DocumentRepository;
 import com.kb.kobo.document.service.DocumentService;
 import com.kb.kobo.analysis.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +27,14 @@ public class QuestionController {
     private final QuestionService questionService;
     private final DocumentService documentService;
     private final AnalysisService analysisService;
+    private final DocumentRepository documentRepository;
 
     @Autowired
-    public QuestionController(QuestionService questionService, DocumentService documentService, AnalysisService analysisService) {
+    public QuestionController(QuestionService questionService, DocumentService documentService, AnalysisService analysisService, DocumentRepository documentRepository) {
         this.questionService = questionService;
         this.documentService = documentService;
         this.analysisService = analysisService;
+        this.documentRepository = documentRepository;
     }
 
     @PostMapping("/submit")
@@ -59,7 +62,7 @@ public class QuestionController {
             String result = analysisResultMap.get("result").toString();
 
             if (returnedDocumentId != null) {
-                Document document = documentService.findDocumentById(returnedDocumentId)
+                Document document = documentRepository.findByDocumentId(returnedDocumentId)
                         .orElseThrow(() -> new RuntimeException("문서를 찾을 수 없습니다."));
                 analysisResult.setDocument(document);
                 System.out.println("저장된 문서(documentId): " + returnedDocumentId);
